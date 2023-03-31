@@ -26,7 +26,7 @@
                 android:layout_height="?actionBarSize"
                 android:fontFamily="@font/poppins_light"
                 android:gravity="center"
-                android:text="@string/title_product_details"
+                android:text="@string/title_order_details"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_16ssp"
                 android:textStyle="bold"
@@ -36,27 +36,28 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tv_product_name"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
                 android:fontFamily="@font/poppins_light"
                 android:text="@string/text_dummy_product_name"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_12ssp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/vp_product_images"
                 app:layout_constraintTop_toBottomOf="@id/tv_header" />
 
             <androidx.viewpager.widget.ViewPager
                 android:id="@+id/vp_product_images"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_200sdp"
+                android:layout_width="@dimen/_56sdp"
+                android:layout_height="@dimen/_56sdp"
                 android:layout_marginHorizontal="@dimen/_14sdp"
-                android:layout_marginTop="@dimen/_10sdp"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tv_product_name"
+                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_product_name" />
+                app:layout_constraintTop_toBottomOf="@id/tv_header" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tv_product_price"
@@ -74,13 +75,13 @@
                 app:layout_constraintTop_toBottomOf="@id/vp_product_images" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tv_product_desc"
+                android:id="@+id/tv_order_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_10sdp"
                 android:fontFamily="@font/poppins_light"
                 android:justificationMode="inter_word"
-                android:text="@string/text_dummy_product_desc"
+                android:text="@string/text_order_info"
                 android:textColor="@color/primary_text_color"
                 android:textSize="@dimen/_12ssp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -94,11 +95,12 @@
                 android:layout_marginStart="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginEnd="@dimen/_5sdp"
+                android:visibility="gone"
                 android:background="@drawable/bg_border_5"
                 app:layout_constraintEnd_toStartOf="@id/cl_item_count"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_product_desc">
+                app:layout_constraintTop_toBottomOf="@id/tv_order_info">
 
                 <androidx.appcompat.widget.AppCompatSpinner
                     android:id="@+id/sp_size"
@@ -115,11 +117,12 @@
                 android:layout_marginStart="@dimen/_5sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginEnd="@dimen/_10sdp"
+                android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="@id/cl_size"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@id/cl_size"
-                app:layout_constraintTop_toBottomOf="@id/tv_product_desc">
+                app:layout_constraintTop_toBottomOf="@id/tv_order_info">
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/iv_remove_item"
@@ -171,6 +174,7 @@
                 android:layout_marginTop="@dimen/_20sdp"
                 android:background="@drawable/bg_button_5"
                 android:fontFamily="@font/poppins_light"
+                android:visibility="gone"
                 android:gravity="center"
                 android:text="@string/text_add_to_cart"
                 android:textColor="@color/white"
@@ -184,6 +188,7 @@
                 android:id="@+id/vp_product_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:visibility="gone"
                 android:layout_marginHorizontal="@dimen/_5sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 app:layout_constraintEnd_toEndOf="parent"

@@ -84,7 +84,7 @@
             android:fontFamily="@font/poppins_light"
             android:gravity="center_vertical"
             android:padding="@dimen/_5sdp"
-            android:text="@string/text_orders"
+            android:text="@string/title_my_orders"
             android:textColor="@color/colorPrimary"
             android:textSize="@dimen/_14ssp"
             android:textStyle="bold"
@@ -97,11 +97,49 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/cl_about_us"
+        android:id="@+id/cl_notifications"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="@dimen/_5sdp"
         app:layout_constraintTop_toBottomOf="@id/cl_orders">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_notifications"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:src="@drawable/ic_round_notifications_24_dp"
+            android:tint="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_notifications"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_notifications"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center_vertical"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/title_notifications"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/iv_notifications"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_about_us"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_5sdp"
+        app:layout_constraintTop_toBottomOf="@id/cl_notifications">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/iv_about_us"
@@ -249,11 +287,49 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/cl_logout"
+        android:id="@+id/cl_refund_policy"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="@dimen/_5sdp"
         app:layout_constraintTop_toBottomOf="@id/cl_privacy_policy">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_refund_policy"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:src="@drawable/ic_round_refund_policy_24_dp"
+            android:tint="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_refund_policy"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_refund_policy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center_vertical"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/title_refund_policy"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/iv_refund_policy"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_5sdp"
+        app:layout_constraintTop_toBottomOf="@id/cl_refund_policy">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/iv_logout"

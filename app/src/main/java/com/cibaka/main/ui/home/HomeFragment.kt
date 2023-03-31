@@ -52,6 +52,9 @@ class HomeFragment : Fragment(), View.OnClickListener {
         binding.ivCart.setOnClickListener {
             NavHostFragment.findNavController(this).navigate(R.id.action_view_cart)
         }
+        binding.ivNotifications.setOnClickListener {
+            NavHostFragment.findNavController(this).navigate(R.id.action_go_to_notifications)
+        }
     }
 
     private fun setUpHomeSlider() {

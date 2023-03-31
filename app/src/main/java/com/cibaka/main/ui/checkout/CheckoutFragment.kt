@@ -1,4 +1,4 @@
-package com.cibaka.main.ui.cart
+package com.cibaka.main.ui.checkout
 
 import android.app.Activity
 import android.os.Bundle
@@ -11,13 +11,14 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.cibaka.R
 import com.cibaka.databinding.FragmentCartBinding
+import com.cibaka.databinding.FragmentCheckoutBinding
 import com.cibaka.main.ui.cart.adapter.CartItemAdapter
 import com.cibaka.main.ui.cart.interfaces.OnCartItemAddedListener
 import com.cibaka.main.ui.cart.interfaces.OnCartItemRemovedListener
 
-class CartFragment : Fragment(), OnCartItemAddedListener, OnCartItemRemovedListener {
+class CheckoutFragment : Fragment(), OnCartItemAddedListener, OnCartItemRemovedListener {
 
-    private var _binding: FragmentCartBinding? = null
+    private var _binding: FragmentCheckoutBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -27,9 +28,8 @@ class CartFragment : Fragment(), OnCartItemAddedListener, OnCartItemRemovedListe
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
-        val cartViewModel = ViewModelProvider(this)[CartViewModel::class.java]
 
-        _binding = FragmentCartBinding.inflate(inflater, container, false)
+        _binding = FragmentCheckoutBinding.inflate(inflater, container, false)
         val root: View = binding.root
         init()
         return root
@@ -38,16 +38,12 @@ class CartFragment : Fragment(), OnCartItemAddedListener, OnCartItemRemovedListe
     private fun init() {
         mActivity = requireActivity()
         setupOnClickListener()
-        binding.rvCartItems.layoutManager =
-            LinearLayoutManager(mActivity!!, LinearLayoutManager.VERTICAL, false)
-        binding.rvCartItems.adapter =
-            CartItemAdapter(mActivity!!, this@CartFragment, this@CartFragment)
     }
 
     private fun setupOnClickListener() {
-        binding.btnProceedToPay.setOnClickListener {
+        /*binding.btnProceedToPay.setOnClickListener {
             NavHostFragment.findNavController(this).navigate(R.id.action_checkout)
-        }
+        }*/
     }
 
     override fun onDestroyView() {

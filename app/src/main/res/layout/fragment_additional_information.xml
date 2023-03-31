@@ -1,35 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_header"
+        android:id="@+id/tv_add_info"
         android:layout_width="match_parent"
-        android:layout_height="?actionBarSize"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
         android:fontFamily="@font/poppins_light"
-        android:gravity="center"
-        android:text="@string/title_privacy_policy"
+        android:justificationMode="inter_word"
+        android:text="@string/text_dummy_product_add_info"
         android:textColor="@color/black"
-        android:textSize="@dimen/_16ssp"
-        android:textStyle="bold"
+        android:textSize="@dimen/_12ssp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_about_us"
+        android:id="@+id/tv_size"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/poppins_light"
+        android:text="@string/text_size"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_16ssp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_add_info" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_sizes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/_10sdp"
         android:fontFamily="@font/poppins_light"
-        android:justificationMode="inter_word"
-        android:text="@string/txt_about_us"
-        android:textColor="@color/black"
+        android:text="@string/text_one_size"
+        android:textColor="@color/primary_text_color"
         android:textSize="@dimen/_12ssp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_header" />
+        app:layout_constraintTop_toBottomOf="@id/tv_size" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

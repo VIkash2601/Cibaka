@@ -1,4 +1,4 @@
-package com.cibaka.main.ui.product
+package com.cibaka.main.ui.my_orders
 
 import android.app.Activity
 import android.os.Bundle
@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.GridLayoutManager
 import com.cibaka.R
+import com.cibaka.databinding.FragmentOrderDetailsBinding
 import com.cibaka.databinding.FragmentProductDetailsBinding
 import com.cibaka.main.ui.product.adapter.CustomSpinnerAdapter
 import com.cibaka.main.ui.product.adapter.ProductImagesAdapter
@@ -22,9 +23,9 @@ import com.cibaka.main.ui.product.fragments.DescriptionFragment
 import com.cibaka.main.ui.product.fragments.ShippingReturnFragment
 import com.google.android.material.tabs.TabLayout
 
-class ProductDetailsFragment : Fragment() {
+class OrderDetailsFragment : Fragment() {
 
-    private var _binding: FragmentProductDetailsBinding? = null
+    private var _binding: FragmentOrderDetailsBinding? = null
 
     private val binding get() = _binding!!
     private var mActivity: Activity? = null
@@ -36,7 +37,7 @@ class ProductDetailsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentProductDetailsBinding.inflate(inflater, container, false)
+        _binding = FragmentOrderDetailsBinding.inflate(inflater, container, false)
         init()
         return binding.root
     }

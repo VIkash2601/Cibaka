@@ -26,6 +26,7 @@ class CartItemAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        holder.tvItemPrice.text = mActivity.getString(R.string.text_product_price, "8400")
         holder.tvTotalPrice.text = mActivity.getString(R.string.text_product_price_total, "8400")
         val individualPrice =
             holder.tvItemPrice.text.toString().trim().filter { it.isDigit() }

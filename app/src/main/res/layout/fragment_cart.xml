@@ -2,7 +2,9 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".main.ui.cart.CartFragment">
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_header"
@@ -21,7 +23,9 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_cart_items"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:layout_constraintBottom_toTopOf="@id/btn_proceed_to_pay"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_header" />
 
@@ -29,6 +33,7 @@
         android:id="@+id/tv_no_items"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/_10sdp"
         android:fontFamily="@font/poppins_light"
         android:gravity="center"
         android:text="@string/text_no_items"
@@ -36,9 +41,26 @@
         android:textSize="@dimen/_16ssp"
         android:textStyle="bold"
         android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_proceed_to_pay"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_header" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_proceed_to_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/bg_button_5"
+        android:fontFamily="@font/poppins_light"
+        android:gravity="center"
+        android:text="@string/title_checkout"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

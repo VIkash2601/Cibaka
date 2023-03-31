@@ -36,7 +36,7 @@
                 app:endIconScaleType="fitXY"
                 app:endIconTint="@color/purple_500"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/iv_cart"
+                app:layout_constraintEnd_toStartOf="@+id/iv_notifications"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -59,6 +59,19 @@
                 android:tint="@color/colorPrimary"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/iv_notifications"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_notifications"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:src="@drawable/ic_round_notifications_24_dp"
+                android:tint="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/iv_cart"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/til_search"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -127,6 +140,7 @@
             android:textColor="@color/black"
             android:textSize="@dimen/_14ssp"
             android:textStyle="bold"
+            android:visibility="gone"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/rv_categories" />
@@ -137,6 +151,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/_14sdp"
             android:layout_marginTop="@dimen/_10sdp"
+            android:visibility="gone"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_trending_products" />

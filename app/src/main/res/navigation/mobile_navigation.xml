@@ -16,6 +16,10 @@
             app:destination="@+id/navigation_cart" />
 
         <action
+            android:id="@+id/action_go_to_notifications"
+            app:destination="@+id/navigation_notifications" />
+
+        <action
             android:id="@+id/action_go_to_sub_category"
             app:destination="@+id/navigation_sub_category" />
 
@@ -56,8 +60,20 @@
             app:destination="@+id/navigation_privacy_policy" />
 
         <action
+            android:id="@+id/action_go_to_refund_policy"
+            app:destination="@+id/navigation_refund_policy" />
+
+        <action
             android:id="@+id/action_go_to_profile"
             app:destination="@+id/navigation_profile" />
+
+        <action
+            android:id="@+id/action_go_to_my_orders"
+            app:destination="@+id/navigation_my_orders" />
+
+        <action
+            android:id="@+id/action_go_to_notifications"
+            app:destination="@+id/navigation_notifications" />
 
     </fragment>
 
@@ -89,19 +105,67 @@
         android:id="@+id/navigation_product_details"
         android:name="com.cibaka.main.ui.product.ProductDetailsFragment"
         android:label="@string/title_product_details"
-        tools:layout="@layout/fragment_product_details" />
+        tools:layout="@layout/fragment_product_details">
+
+        <action
+            android:id="@+id/action_view_cart"
+            app:destination="@+id/navigation_cart" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_checkout"
+        android:name="com.cibaka.main.ui.checkout.CheckoutFragment"
+        android:label="@string/title_checkout"
+        tools:layout="@layout/fragment_checkout" />
 
     <fragment
         android:id="@+id/navigation_cart"
         android:name="com.cibaka.main.ui.cart.CartFragment"
         android:label="@string/title_cart"
-        tools:layout="@layout/fragment_cart" />
+        tools:layout="@layout/fragment_cart">
+
+        <action
+            android:id="@+id/action_checkout"
+            app:destination="@+id/navigation_checkout" />
+
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_profile"
         android:name="com.cibaka.main.ui.profile.ProfileFragment"
         android:label="@string/title_profile"
         tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/navigation_my_orders"
+        android:name="com.cibaka.main.ui.my_orders.MyOrdersFragment"
+        android:label="@string/title_my_orders"
+        tools:layout="@layout/fragment_my_orders">
+
+        <action
+            android:id="@+id/action_go_to_order_details"
+            app:destination="@+id/navigation_order_details" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_order_details"
+        android:name="com.cibaka.main.ui.my_orders.OrderDetailsFragment"
+        android:label="@string/title_order_details"
+        tools:layout="@layout/fragment_order_details" />
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.cibaka.main.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications">
+
+        <action
+            android:id="@+id/action_go_to_notifications_product_details"
+            app:destination="@+id/navigation_product_details" />
+
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_about_us"
@@ -120,6 +184,12 @@
         android:name="com.cibaka.main.ui.privacy_policy.PrivacyPolicyFragment"
         android:label="@string/title_privacy_policy"
         tools:layout="@layout/fragment_privacy_policy" />
+
+    <fragment
+        android:id="@+id/navigation_refund_policy"
+        android:name="com.cibaka.main.ui.refund_policy.RefundPolicyFragment"
+        android:label="@string/title_refund_policy"
+        tools:layout="@layout/fragment_refund_policy" />
 
     <fragment
         android:id="@+id/navigation_terms_conditions"

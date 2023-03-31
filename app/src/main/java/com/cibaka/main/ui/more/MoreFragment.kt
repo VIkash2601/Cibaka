@@ -47,6 +47,14 @@ class MoreFragment : Fragment() {
             mActivity!!.finishAffinity()
         }
 
+        binding.clOrders.setOnClickListener {
+            NavHostFragment.findNavController(this).navigate(R.id.action_go_to_my_orders)
+        }
+
+        binding.clNotifications.setOnClickListener {
+            NavHostFragment.findNavController(this).navigate(R.id.action_go_to_notifications)
+        }
+
         binding.clProfile.setOnClickListener {
             NavHostFragment.findNavController(this).navigate(R.id.action_go_to_profile)
         }
@@ -61,6 +69,10 @@ class MoreFragment : Fragment() {
 
         binding.clPrivacyPolicy.setOnClickListener {
             NavHostFragment.findNavController(this).navigate(R.id.action_go_to_privacy_policy)
+        }
+
+        binding.clRefundPolicy.setOnClickListener {
+            NavHostFragment.findNavController(this).navigate(R.id.action_go_to_refund_policy)
         }
 
         binding.clTermsConditions.setOnClickListener {

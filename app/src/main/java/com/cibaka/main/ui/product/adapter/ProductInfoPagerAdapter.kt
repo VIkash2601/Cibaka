@@ -1,33 +1,32 @@
 package com.cibaka.main.ui.product.adapter
 
-import android.content.Context
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
-import com.cibaka.main.ui.product.fragments.AdditionalInformationFragment
-import com.cibaka.main.ui.product.fragments.DescriptionFragment
-import com.cibaka.main.ui.product.fragments.ShippingReturnFragment
 
-class ProductInfoPagerAdapter(
-    private val mContext: Context,
-    private val fm: FragmentManager,
-    private var totalTabs: Int
-) : FragmentStatePagerAdapter(fm) {
+class ProductInfoPagerAdapter(fm: FragmentManager) : FragmentStatePagerAdapter(fm) {
 
     private val fragments: MutableList<Fragment> = ArrayList()
     private val fragmentTitle: MutableList<String> = ArrayList()
 
     override fun getItem(position: Int): Fragment {
-        //return fragments[position]
-        return when (position) {
+        return fragments[position]
+        /*return when (position) {
             0 -> DescriptionFragment()
             1 -> AdditionalInformationFragment()
             else -> ShippingReturnFragment()
-        }
+        }*/
+    }
+
+    override fun getPageTitle(position: Int) = fragmentTitle[position]
+
+    fun addFragment(fragment: Fragment, title: String) {
+        fragments.add(fragment)
+        fragmentTitle.add(title)
     }
 
     override fun getCount(): Int {
-        return totalTabs
+        return fragments.size
     }
 
 }
