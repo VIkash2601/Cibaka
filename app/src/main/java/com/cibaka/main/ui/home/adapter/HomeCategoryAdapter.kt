@@ -20,7 +20,7 @@ class HomeCategoryAdapter(val activity: Activity) : RecyclerView.Adapter<HomeCat
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.ivCategory.setBackgroundResource(R.drawable.ic_category)
+        holder.ivCategory.setBackgroundResource(R.drawable.spray_bottle)
         holder.itemView.setOnClickListener {
             Navigation.findNavController(it).navigate(R.id.action_go_to_sub_category)
         }

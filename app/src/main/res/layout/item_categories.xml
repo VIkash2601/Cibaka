@@ -2,49 +2,42 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/_196sdp"
+    android:layout_height="@dimen/_130sdp"
     app:cardCornerRadius="@dimen/_10sdp"
     android:layout_margin="@dimen/_5sdp">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/iv_category"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:scaleType="centerCrop" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_category_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_10sdp"
             android:text="@string/text_category_name"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_14ssp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/tv_category_price"
-            app:layout_constraintStart_toStartOf="parent" />
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textColor="@color/primary_text_color"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_category_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_10sdp"
             android:layout_marginBottom="@dimen/_10sdp"
             android:text="@string/text_category_price"
-            android:textColor="@color/white"
+            android:textColor="@color/primary_text_color"
             android:textSize="@dimen/_14ssp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            android:textStyle="bold"/>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 
 </androidx.cardview.widget.CardView>
