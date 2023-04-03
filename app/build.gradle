@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.cibaka'
+    namespace 'com.foundrytreasure'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.cibaka"
+        applicationId "com.foundrytreasure"
         minSdk 21
         targetSdk 33
         versionCode 1

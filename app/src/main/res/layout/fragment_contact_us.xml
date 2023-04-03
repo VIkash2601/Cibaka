@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context="com.cibaka.main.ui.contact_us.ContactUsFragment">
+    tools:context="com.foundrytreasure.main.ui.contact_us.ContactUsFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

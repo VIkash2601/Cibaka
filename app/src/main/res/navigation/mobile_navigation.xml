@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.cibaka.main.ui.home.HomeFragment"
+        android:name="com.foundrytreasure.main.ui.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home">
 
@@ -27,7 +27,7 @@
 
     <fragment
         android:id="@+id/navigation_shop"
-        android:name="com.cibaka.main.ui.shop.ShopFragment"
+        android:name="com.foundrytreasure.main.ui.shop.ShopFragment"
         android:label="@string/title_shop"
         tools:layout="@layout/fragment_shop">
 
@@ -39,7 +39,7 @@
 
     <fragment
         android:id="@+id/navigation_more"
-        android:name="com.cibaka.main.ui.more.MoreFragment"
+        android:name="com.foundrytreasure.main.ui.more.MoreFragment"
         android:label="@string/title_more"
         tools:layout="@layout/fragment_more">
 
@@ -79,7 +79,7 @@
 
     <fragment
         android:id="@+id/navigation_sub_category"
-        android:name="com.cibaka.main.ui.sub_category.SubCategoryFragment"
+        android:name="com.foundrytreasure.main.ui.sub_category.SubCategoryFragment"
         android:label="@string/text_sub_category"
         tools:layout="@layout/fragment_sub_category">
 
@@ -91,7 +91,7 @@
 
     <fragment
         android:id="@+id/navigation_product"
-        android:name="com.cibaka.main.ui.product.ProductFragment"
+        android:name="com.foundrytreasure.main.ui.product.ProductFragment"
         android:label="@string/title_products"
         tools:layout="@layout/fragment_product">
 
@@ -103,7 +103,7 @@
 
     <fragment
         android:id="@+id/navigation_product_details"
-        android:name="com.cibaka.main.ui.product.ProductDetailsFragment"
+        android:name="com.foundrytreasure.main.ui.product.ProductDetailsFragment"
         android:label="@string/title_product_details"
         tools:layout="@layout/fragment_product_details">
 
@@ -115,13 +115,13 @@
 
     <fragment
         android:id="@+id/navigation_checkout"
-        android:name="com.cibaka.main.ui.checkout.CheckoutFragment"
+        android:name="com.foundrytreasure.main.ui.checkout.CheckoutFragment"
         android:label="@string/title_checkout"
         tools:layout="@layout/fragment_checkout" />
 
     <fragment
         android:id="@+id/navigation_cart"
-        android:name="com.cibaka.main.ui.cart.CartFragment"
+        android:name="com.foundrytreasure.main.ui.cart.CartFragment"
         android:label="@string/title_cart"
         tools:layout="@layout/fragment_cart">
 
@@ -133,13 +133,13 @@
 
     <fragment
         android:id="@+id/navigation_profile"
-        android:name="com.cibaka.main.ui.profile.ProfileFragment"
+        android:name="com.foundrytreasure.main.ui.profile.ProfileFragment"
         android:label="@string/title_profile"
         tools:layout="@layout/fragment_profile" />
 
     <fragment
         android:id="@+id/navigation_my_orders"
-        android:name="com.cibaka.main.ui.my_orders.MyOrdersFragment"
+        android:name="com.foundrytreasure.main.ui.my_orders.MyOrdersFragment"
         android:label="@string/title_my_orders"
         tools:layout="@layout/fragment_my_orders">
 
@@ -151,13 +151,13 @@
 
     <fragment
         android:id="@+id/navigation_order_details"
-        android:name="com.cibaka.main.ui.my_orders.OrderDetailsFragment"
+        android:name="com.foundrytreasure.main.ui.my_orders.OrderDetailsFragment"
         android:label="@string/title_order_details"
         tools:layout="@layout/fragment_order_details" />
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.cibaka.main.ui.notifications.NotificationsFragment"
+        android:name="com.foundrytreasure.main.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications">
 
@@ -169,31 +169,31 @@
 
     <fragment
         android:id="@+id/navigation_about_us"
-        android:name="com.cibaka.main.ui.about_us.AboutUsFragment"
+        android:name="com.foundrytreasure.main.ui.about_us.AboutUsFragment"
         android:label="@string/title_about_us"
         tools:layout="@layout/fragment_about_us" />
 
     <fragment
         android:id="@+id/navigation_contact_us"
-        android:name="com.cibaka.main.ui.contact_us.ContactUsFragment"
+        android:name="com.foundrytreasure.main.ui.contact_us.ContactUsFragment"
         android:label="@string/title_contact_us"
         tools:layout="@layout/fragment_contact_us" />
 
     <fragment
         android:id="@+id/navigation_privacy_policy"
-        android:name="com.cibaka.main.ui.privacy_policy.PrivacyPolicyFragment"
+        android:name="com.foundrytreasure.main.ui.privacy_policy.PrivacyPolicyFragment"
         android:label="@string/title_privacy_policy"
         tools:layout="@layout/fragment_privacy_policy" />
 
     <fragment
         android:id="@+id/navigation_refund_policy"
-        android:name="com.cibaka.main.ui.refund_policy.RefundPolicyFragment"
+        android:name="com.foundrytreasure.main.ui.refund_policy.RefundPolicyFragment"
         android:label="@string/title_refund_policy"
         tools:layout="@layout/fragment_refund_policy" />
 
     <fragment
         android:id="@+id/navigation_terms_conditions"
-        android:name="com.cibaka.main.ui.terms_conditions.TermsConditionsFragment"
+        android:name="com.foundrytreasure.main.ui.terms_conditions.TermsConditionsFragment"
         android:label="@string/title_terms_conditions"
         tools:layout="@layout/fragment_terms_conditions" />
 

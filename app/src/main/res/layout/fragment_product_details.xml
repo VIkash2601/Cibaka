@@ -180,7 +180,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/cl_size" />
 
-            <com.cibaka.main.ui.product.helper.CustomViewPager
+            <com.foundrytreasure.main.ui.product.helper.CustomViewPager
                 android:id="@+id/vp_product_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -202,7 +202,7 @@
                     app:tabSelectedTextColor="@color/colorPrimary"
                     app:tabTextColor="@color/primary_text_color" />
 
-            </com.cibaka.main.ui.product.helper.CustomViewPager>
+            </com.foundrytreasure.main.ui.product.helper.CustomViewPager>
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tv_you_may_also_like"
