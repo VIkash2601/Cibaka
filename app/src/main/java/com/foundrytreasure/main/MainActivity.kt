@@ -1,7 +1,6 @@
 package com.foundrytreasure.main
 
 import android.os.Bundle
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -9,6 +8,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.foundrytreasure.R
 import com.foundrytreasure.databinding.ActivityMainBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
 
@@ -28,7 +28,11 @@ class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.navigation_home, R.id.navigation_shop, R.id.navigation_more
+                R.id.navigation_home,
+                R.id.navigation_shop,
+                R.id.navigation_cart,
+                R.id.navigation_my_orders,
+                R.id.navigation_more
             )
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
